@@ -1,23 +1,24 @@
-// // Assignment Code
+// Assignment Code
+
  "use stict";
 
 var generateBtn = document.querySelector("#generate");
 
-// //Creatung an array of for password
-var lowercase =  "abcdefghijklmnopqrstuvwuxyz";
-var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWUXYZ";
-var numeric = "0123456789";
-var specialChar = "!'()*+,-./:;<=>?@[\]^_`{|}~";
+// // //Creatng an array of for password
+var lowercase =  ["abcdefghijklmnopqrstuvwuxyz"];
+var uppercase = ["ABCDEFGHIJKLMNOPQRSTUVWUXYZ"];
+var numeric = ["0123456789"];
+var specialChar = ["!'()*+,-./:;<=>?@[\]^_`{|}~"];
 
-// I do know if I can add array in an array
-var myArray = [lowercase, uppercase, numeric, specialChar];
+// Created an array of arrays so that I can utilize arrays to generate a password but it is failing 
+var myArray = [[lowercase], [uppercase], [numeric], [specialChar]];
 
-// // Generate a random password using array 
-var randPwd = myArray[Math.floor(Math.random()*myArray.length)];
+// // // Generate a random password using array 
+var randPwd = myArray[Math.floor(Math.random()*myArray.length) +1];
 
 
 function generatePassword(){
-  return  randPwd = myArray[Math.floor(Math.random()*myArray.length)];
+  return  randPwd;
 }
 
 // // Write password to the #password input
@@ -63,9 +64,10 @@ function writePassword(event) {
         var pwdNum = prompt("Would you like your password to contain a number? If yes, type yes then click ok or if no, then click cancel")
         if (pwdNum) {
 
-        }
           confrim("Sure, we will add an number to your password")
           // console.log(confirmNumeric)
+        }
+          
 
           var specialCharacters = prompt("Would you like your password to contain a special characters? If yes, type yes then click ok or if no, then click cancel")
           if (specialCharacters) {
@@ -73,10 +75,10 @@ function writePassword(event) {
           }
           confirm("Sure, we will add speical character to your password.");
           // console.log(confirmSpechialChar)
-      
+           
        
   var password = generatePassword();
-  console.log(lowercase[0])
+  // console.log(lowercase[0])
   var passwordText = document.querySelector("#password"); 
   
   // Looping through each item in the array to create a password
