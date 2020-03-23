@@ -1,5 +1,6 @@
 // // Assignment Code
- 
+ "use stict";
+
 var generateBtn = document.querySelector("#generate");
 
 // //Creatung an array of for password
@@ -32,30 +33,48 @@ function writePassword(event) {
  
  
       // prompt user to choose password length and validate if length is less than 8 or greater than 128 if true alert user to reenter number
-      var pwdLen = prompt("Choose the length of your password?");
+      var pwdLen = prompt("Please Choose the length of your password");
        while (pwdLen > 128 || pwdLen < 8) {
        alert("Characters are least 8 characters long but not greater than 128.");
        pwdLen = prompt("Choose the length of your password?");
- 
-     }
+      }
+
+       // Store users' input by confirming their input 
+      confirm("You chose " + pwdLen + " as the length of your password")
+
        
- 
-       // Store users' input by cofirming their input 
         
-        var confirmLowercase = confirm("Would you like your password to contain an lowercase letter? If yes, click ok if no, click cancel.");
+        var pwdLowerChar = prompt("Would you like your password to contain a lowercase letter? If yes, type yes then click ok or if no, click cancel")
+        if(pwdLowerChar){
+
+        }
+
+        confirm("Sure, we will add a lowercase to your password")
         // console.log(confirmLowercase)
 
-        var confirmUpperCase = confirm("Would you like your password to contain an uppercase letter? If yes, click ok if no, click cancel.");
-        // console.log(confirmUpperCase)
+         
+        var pwdUpperChar = prompt("Would you like your password to contain an uppercase letter? If yes, type yes then click ok or if no, click cancel")
+          if (pwdUpperChar) {
+                      }
 
-        var confirmNumeric = confirm("Would you like your password to contain a Number? If yes, click ok if no, click cancel.");
-        // console.log(confirmNumeric)
+            confirm("Sure, we will add an uppercase to your password")
+            // console.log(confirmUpperCase)
 
-        var confrimSpecialChar = confirm("Would you like your password to contain a special characters? If yes, click ok if no, click cancel");
-        // console.log(confirmSpechialChar)
+        var pwdNum = prompt("Would you like your password to contain a number? If yes, type yes then click ok or if no, then click cancel")
+        if (pwdNum) {
+
+        }
+          confrim("Sure, we will add an number to your password")
+          // console.log(confirmNumeric)
+
+          var specialCharacters = prompt("Would you like your password to contain a special characters? If yes, type yes then click ok or if no, then click cancel")
+          if (specialCharacters) {
+
+          }
+          confirm("Sure, we will add speical character to your password.");
+          // console.log(confirmSpechialChar)
       
- 
-      
+       
   var password = generatePassword();
   console.log(lowercase[0])
   var passwordText = document.querySelector("#password"); 
@@ -87,6 +106,7 @@ function writePassword(event) {
       while (pwdLen > 128 || pwdLen < 8) {
       alert("Characters are least 8 characters long but not greater than 128.");
       pwdLen = prompt("Choose the length of your password?");
+    
 
     }
       
