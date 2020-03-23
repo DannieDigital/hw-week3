@@ -1,5 +1,5 @@
 # 03 Homework 
-I was not able to successfully create pop a random password array from my javascript code. Please provide feedback that will point me in the right direction
+First I was not able to successfully create pop a random password array from my javascript code but I refactor the code and is now unable to generate a password.  Please provide feedback that will point me in the right direction
 
 
 
